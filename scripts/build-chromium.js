@@ -15,8 +15,14 @@ console.log('Building extension version ' + version + '...');
 
 // Empty build target contents. This will also create the directory
 // if it does not exist.
-fs.emptyDir(BUILD_DIR);
+fs.emptyDirSync(BUILD_DIR);
  
+// Create the build version of the src.
+// Currently, this just deletes tests.
+var stageDir = path.join(BUILD_DIR, 'chrome-tfac');
+fs.copySync(SRC_DIR, stageDir);
+fs.removeSync(path.join(stageDir, '__tests__'));
+
 // Create zip file.
 var zipFileName = 'chrome-tfac-v' + version + '.zip';
 var output = fs.createWriteStream(path.join(BUILD_DIR, zipFileName));
@@ -38,7 +44,7 @@ archive.on('error', function(err) {
 archive.pipe(output);
 
 // Append all files in our src directory.
-archive.directory(SRC_DIR, '/');
+archive.directory(stageDir, '/');
  
 // Finalize the archive (i.e. we are done appending files,
 // but streams still have to finish).
