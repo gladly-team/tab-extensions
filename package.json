@@ -1,0 +1,19 @@
+{
+  "name": "tab-extensions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gladly-team/tab-extensions.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gladly-team/tab-extensions/issues"
+  },
+  "homepage": "https://github.com/gladly-team/tab-extensions#readme"
+}
