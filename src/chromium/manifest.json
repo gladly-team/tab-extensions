@@ -5,8 +5,9 @@
   "manifest_version": 2,
   "description": "Donate to a cause you care about just by surfing the web!",
   "icons": {
-    "128": "./img/logo128.png",
-    "48": "./img/logo48.jpg"
+    "16": "./img/logo16.png",
+    "48": "./img/logo48.png",
+    "128": "./img/logo128.png"
   },
   "name": "Tab for a Cause",
   "background": {
