@@ -1,15 +1,15 @@
 {
-	"chrome_url_overrides": {
-		"newtab": "redirect.html"
-	},
-	"manifest_version": 2,
-	"description": "Donate to a cause you care about just by surfing the web!",
-	"icons": {
-		"128": "./img/logo128.png",
-		"48": "./img/logo48.jpg"
-	},
-	"name": "Tab for a Cause",
-	"permissions": [ "tabs" ] ,
-	"update_url": "http://clients2.google.com/service/update2/crx",
-	"version": "5.14"
+  "chrome_url_overrides": {
+    "newtab": "redirect.html"
+  },
+  "manifest_version": 2,
+  "description": "Donate to a cause you care about just by surfing the web!",
+  "icons": {
+    "128": "./img/logo128.png",
+    "48": "./img/logo48.jpg"
+  },
+  "name": "Tab for a Cause",
+  "permissions": [ "tabs" ] ,
+  "update_url": "http://clients2.google.com/service/update2/crx",
+  "version": "5.14"
 }
