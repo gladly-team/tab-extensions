@@ -10,7 +10,8 @@
   },
   "name": "Tab for a Cause",
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "permissions": [
     "tabs"
