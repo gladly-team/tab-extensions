@@ -18,9 +18,17 @@ console.log('Building extension version ' + version + '...');
 fs.emptyDirSync(BUILD_DIR);
  
 // Create the build version of the src.
-// Currently, this just deletes tests.
 var stageDir = path.join(BUILD_DIR, 'chrome-tfac');
-fs.copySync(SRC_DIR, stageDir);
+
+// Filter copying source files to build. Return true if we should copy and
+// false if we should not.
+var filterCopiedFiles = (src, dest) => {
+  if (path.basename(src) === '.DS_Store') {
+    return false;
+  }
+  return true;
+}
+fs.copySync(SRC_DIR, stageDir, { filter: filterCopiedFiles });
 fs.removeSync(path.join(stageDir, '__tests__'));
 
 // Create zip file.
