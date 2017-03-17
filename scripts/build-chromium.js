@@ -26,9 +26,7 @@ fs.removeSync(path.join(stageDir, '__tests__'));
 // Create zip file.
 var zipFileName = 'chrome-tfac-v' + version + '.zip';
 var output = fs.createWriteStream(path.join(BUILD_DIR, zipFileName));
-var archive = archiver('zip', {
-    store: true // Sets the compression method to STORE. 
-});
+var archive = archiver('zip');
  
 // Listen for all archive data to be written.
 output.on('close', function() {
