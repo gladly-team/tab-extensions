@@ -7,6 +7,8 @@
     "test": "jest",
     "build": "npm run build-chromium",
     "build-chromium": "npm test && node ./scripts/build-chromium.js",
+    "firefox:build": "cd ./src/firefox && web-ext build -a ../../build/firefox",
+    "firefox:run": "cd ./src/firefox && web-ext run",
     "develop": "nodemon --watch src --exec \"npm run build\""
   },
   "repository": {
