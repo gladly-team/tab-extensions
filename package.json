@@ -8,8 +8,9 @@
     "build": "yarn run chromium:build && yarn run firefox:build",
     "chromium:build": "yarn test ./chromium/ && node ./scripts/build-chromium.js",
     "chromium:develop": "nodemon --watch ./src/chromium --exec \"yarn run chromium:build\"",
-    "firefox:build": "yarn test ./firefox/ && cd ./src/firefox && web-ext build -a ../../build/firefox --overwrite-dest",
-    "firefox:run": "cd ./src/firefox && web-ext run"
+    "firefox:build": "yarn test ./firefox/ && web-ext build --source-dir=./src/firefox -a ./build/firefox --overwrite-dest ",
+    "firefox:lint": "web-ext lint --source-dir=./src/firefox",
+    "firefox:run": "web-ext run --source-dir=./src/firefox"
   },
   "repository": {
     "type": "git",
