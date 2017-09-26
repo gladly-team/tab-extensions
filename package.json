@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "npm run build-chromium",
-    "build-chromium": "npm test && node ./scripts/build-chromium.js",
-    "firefox:build": "cd ./src/firefox && web-ext build -a ../../build/firefox",
-    "firefox:run": "cd ./src/firefox && web-ext run",
-    "develop": "nodemon --watch src --exec \"npm run build\""
+    "build": "yarn run chromium:build && yarn run firefox:build",
+    "chromium:build": "yarn test ./chromium/ && node ./scripts/build-chromium.js",
+    "chromium:develop": "nodemon --watch ./src/chromium --exec \"yarn run chromium:build\"",
+    "firefox:build": "yarn test ./firefox/ && cd ./src/firefox && web-ext build -a ../../build/firefox --overwrite-dest",
+    "firefox:run": "cd ./src/firefox && web-ext run"
   },
   "repository": {
     "type": "git",
