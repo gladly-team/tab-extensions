@@ -1,0 +1,8 @@
+{
+  "applications": {
+    "gecko": {
+      "id": "contact@tabforacause.org",
+      "update_url": "https://tab.gladly.io/media/firefox/update.json"
+    }
+  }
+}

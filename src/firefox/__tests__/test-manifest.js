@@ -1,5 +1,7 @@
 
 const manifest = require('../manifest.json');
+const manifestAddonStore = require('../manifest.addon-store-overrides.json');
+const manifestSelfHosted = require('../manifest.self-hosted-overrides.json');
 
 // Tests to avoid accidentally requesting new permissions.
 
@@ -18,6 +20,27 @@ test('manifest does not extend devtools', () => {
 
 test('manifest does not use plugins', () => {
   expect(manifest['plugins']).toBeUndefined();
+});
+
+test('addon store manifest overrides are as expected', () => {
+  expect(manifestAddonStore).toEqual({
+    "applications": {
+      "gecko": {
+        "id": "tabforacause@tabforacause.org"
+      }
+    }
+  });
+});
+
+test('self-hosted manifest overrides are as expected', () => {
+  expect(manifestSelfHosted).toEqual({
+    "applications": {
+      "gecko": {
+        "id": "contact@tabforacause.org",
+        "update_url": "https://tab.gladly.io/media/firefox/update.json"
+      }
+    }
+  });
 });
 
 // Basic display tests.
