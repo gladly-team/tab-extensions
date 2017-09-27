@@ -26,7 +26,8 @@ test('addon store manifest overrides are as expected', () => {
   expect(manifestAddonStore).toEqual({
     "applications": {
       "gecko": {
-        "id": "tabforacause@tabforacause.org"
+        "id": "tabforacause@tabforacause.org",
+        "strict_min_version": "56.0a1"
       }
     }
   });
@@ -37,7 +38,8 @@ test('self-hosted manifest overrides are as expected', () => {
     "applications": {
       "gecko": {
         "id": "contact@tabforacause.org",
-        "update_url": "https://tab.gladly.io/media/firefox/update.json"
+        "strict_min_version": "56.0a1",
+        "update_url": "https://tab.gladly.io/firefox/update.json"
       }
     }
   });
