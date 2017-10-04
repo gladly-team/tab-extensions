@@ -1,11 +1,13 @@
 
 var fs = require('fs-extra');
 var path = require('path');
+const execSync = require('child_process').execSync;
 
 var archiver = require('archiver');
 
 var BASE_BUILD_DIR = path.join(__dirname, '../build/');
 var BUILD_DIR = path.join(BASE_BUILD_DIR, 'chromium/');
+var SHARED_CODE_BUILD_DIR = path.join(__dirname, '../intermediate-builds/shared/');
 var SRC_DIR = path.join(__dirname, '../src/chromium/');
 
 // Get the version number.
@@ -30,6 +32,10 @@ var filterCopiedFiles = (src, dest) => {
 }
 fs.copySync(SRC_DIR, stageDir, { filter: filterCopiedFiles });
 fs.removeSync(path.join(stageDir, '__tests__'));
+
+// Build the shared code and add it to the built extension.
+execSync('yarn run shared:build')
+fs.copySync(SHARED_CODE_BUILD_DIR, stageDir)
 
 // Create zip file.
 var zipFileName = 'chrome-tfac-v' + version + '.zip';

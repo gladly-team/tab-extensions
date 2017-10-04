@@ -15,7 +15,8 @@
     "firefox:make-manifest:addon-store": "cd ./src/firefox/ && cat manifest.json manifest.addon-store-overrides.json | json --deep-merge > ./tmp/manifest.addon-store.json",
     "firefox:make-final-builds": "web-ext build --source-dir=./intermediate-builds/firefox/addon-store -a ./build/firefox/addon-store --overwrite-dest && web-ext build --source-dir=./intermediate-builds/firefox/self-hosted -a ./build/firefox/self-hosted --overwrite-dest",
     "firefox:lint": "web-ext lint --source-dir=./src/firefox",
-    "firefox:run": "web-ext run --source-dir=./src/firefox"
+    "firefox:run": "web-ext run --source-dir=./ src/firefox",
+    "shared:build": "webpack ./src/shared/js/index.js ./intermediate-builds/shared/js/newtab.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "jest": "^19.0.2",
     "json": "^9.0.6",
     "nodemon": "^1.11.0",
-    "web-ext": "^2.0.0"
+    "web-ext": "^2.0.0",
+    "webpack": "^3.6.0"
   }
 }
