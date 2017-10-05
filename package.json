@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "yarn run lint && jest",
     "build": "yarn run chromium:build && yarn run firefox:build",
     "chromium:build": "yarn test ./chromium/ && NODE_ENV=production node ./scripts/build-chromium.js",
     "chromium:develop": "nodemon --watch ./src/chromium --exec \"yarn run chromium:build\"",
     "firefox:build": "yarn test ./firefox/ && NODE_ENV=production node ./scripts/build-firefox.js",
     "firefox:lint": "web-ext lint --source-dir=./src/firefox",
     "firefox:run": "web-ext run --source-dir=./ src/firefox",
-    "shared:build": "NODE_ENV=production node ./scripts/build-shared.js"
+    "shared:build": "NODE_ENV=production node ./scripts/build-shared.js",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "jest": "^19.0.2",
     "json": "^9.0.6",
     "nodemon": "^1.11.0",
+    "standard": "^10.0.3",
     "web-ext": "^2.0.0",
     "webpack": "^3.6.0"
   }
