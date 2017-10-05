@@ -6,12 +6,12 @@
   "scripts": {
     "test": "jest",
     "build": "yarn run chromium:build && yarn run firefox:build",
-    "chromium:build": "yarn test ./chromium/ && node ./scripts/build-chromium.js",
+    "chromium:build": "yarn test ./chromium/ && NODE_ENV=production node ./scripts/build-chromium.js",
     "chromium:develop": "nodemon --watch ./src/chromium --exec \"yarn run chromium:build\"",
-    "firefox:build": "yarn test ./firefox/ && node ./scripts/build-firefox.js",
+    "firefox:build": "yarn test ./firefox/ && NODE_ENV=production node ./scripts/build-firefox.js",
     "firefox:lint": "web-ext lint --source-dir=./src/firefox",
     "firefox:run": "web-ext run --source-dir=./ src/firefox",
-    "shared:build": "webpack ./src/shared/js/index.js ./intermediate-builds/shared/js/newtab.js"
+    "shared:build": "NODE_ENV=production node ./scripts/build-shared.js"
   },
   "repository": {
     "type": "git",
