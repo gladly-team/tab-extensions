@@ -19,7 +19,7 @@
 
 ## Building
 
-### All extensions
+### All Browsers
 `yarn run build`
 
 ### Chrome
