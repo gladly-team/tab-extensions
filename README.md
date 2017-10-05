@@ -19,7 +19,7 @@
 
 ## Building
 
-### All extensions
+### All Browsers
 `yarn run build`
 
 ### Chrome
@@ -28,7 +28,7 @@
 ### Firefox
 `yarn run firefox:build`
 
-Note: we maintain two Firefox extensions: one that is listed in the Mozilla Add-ons Store and one that is self-hosted for download from our web page. This builds both. The extensions only differ in some manifest.json entries; see `manifest.addon-store-overrides.json` and `manifest.self-hosted-overrides.json`. We build the final manifest.json files with the `firefox:make-manifests` yarn command.
+Note: we maintain two Firefox extensions: one that is listed in the Mozilla Add-ons Store and one that is self-hosted for download from our web page. This builds both. The extensions only differ in some manifest.json entries; see `manifest.addon-store-overrides.json` and `manifest.self-hosted-overrides.json`. We build the final manifest.json files in the Firefox build script.
 
 ## Testing
 `yarn test`
