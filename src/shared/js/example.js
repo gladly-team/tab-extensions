@@ -1,2 +1,2 @@
 
-console.log('example')
+// console.log('This is example.js')

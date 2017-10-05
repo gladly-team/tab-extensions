@@ -1,4 +1,4 @@
 
 import './example'
 
-console.log('here!')
+// console.log('This is index.js')
