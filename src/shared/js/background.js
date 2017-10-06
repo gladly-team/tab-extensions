@@ -1,3 +1,4 @@
+/* globals Image */
 
 import {
   STORAGE_BACKGROUND_OPTION,
@@ -31,7 +32,15 @@ export const showBackgroundColor = (color) => {
   bkgElem.style.background = color
 }
 
-// TODO
 export const showBackgroundImg = (imgSrc) => {
   console.log('Showing background image', imgSrc)
+  const img = new Image()
+  img.addEventListener('load', function () {
+    const bkgElem = document.getElementById('user-background')
+    // TODO: need to add inset shadow to sibling element.
+    // bkgElem.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(' + imgSrc + ')'
+    bkgElem.style.backgroundImage = `url(${imgSrc})`
+    bkgElem.style.opacity = '1'
+  })
+  img.src = imgSrc
 }
