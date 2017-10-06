@@ -30,6 +30,7 @@ export const showBackgroundColor = (color) => {
   console.log('Showing background color', color)
   const bkgElem = document.getElementById('user-background')
   bkgElem.style.background = color
+  bkgElem.style.opacity = '1'
 }
 
 export const showBackgroundImg = (imgSrc) => {

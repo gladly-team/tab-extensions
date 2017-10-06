@@ -69,11 +69,12 @@ describe('background in extension new tab page', () => {
     const showBackgroundColor = require('../background').showBackgroundColor
     showBackgroundColor('#FF0000')
     expect(bkgElem.style.background).toBe('rgb(255, 0, 0)')
+    expect(bkgElem.style.opacity).toEqual('1')
   })
 
   test('showBackgroundImg works as expected', () => {
     // Set up our document body
-    document.body.innerHTML = "<div id='user-background' style='opacity: 0;'></div>"
+    document.body.innerHTML = "<div id='user-background'></div>"
 
     const showBackgroundImg = require('../background').showBackgroundImg
     const fakeImgSrc = 'http://example.com/my-img.png'
