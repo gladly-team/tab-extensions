@@ -8,7 +8,7 @@
     "build": "yarn run chromium:build && yarn run firefox:build",
     "chromium:build": "yarn test ./chromium/ && NODE_ENV=production node ./scripts/build-chromium.js",
     "chromium:develop": "nodemon --watch ./src/chromium --exec \"yarn run chromium:build\"",
-    "firefox:build": "yarn run firefox:test && yarn run firefox:build-only",
+    "firefox:build": "yarn run firefox:test && yarn run firefox:build:no-test",
     "firefox:test": "yarn test ./firefox/",
     "firefox:build:no-test": "NODE_ENV=production node ./scripts/build-firefox.js",
     "firefox:develop": "npm-run-all -p firefox:develop:watch firefox:develop:webext",
