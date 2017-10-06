@@ -21,14 +21,13 @@ var trustedOrigins = [
 // Called sometime after postMessage is called
 function receiveMessage (event) {
   // Make sure we trust the sender.
-  console.log(event.origin)
   if (trustedOrigins.indexOf(event.origin) === -1) {
     console.error(`Received message from untrusted domain: ${event.origin}`)
     return
   }
   switch (event.data.type) {
     case POST_MESSAGE_TYPE_BACKGROUND_SETTINGS:
-      console.log('Updating background settings', event)
+      console.log('Updating background settings:', event)
       updateBackgroundSettings(event.data.data)
       break
     default:
