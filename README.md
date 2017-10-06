@@ -14,7 +14,7 @@
 * The extension will re-build on file change but still requires manually reloading the extension in Chrome.
 
 ### Firefox
-* `yarn run firefox:run`
+* `yarn run firefox:develop`
 * This opens an instance of Firefox with the extension installed. It will hot reload on changes.
 
 ## Building
