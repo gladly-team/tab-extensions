@@ -6,8 +6,10 @@
   "scripts": {
     "test": "yarn run lint && jest",
     "build": "yarn run chromium:build && yarn run firefox:build",
-    "chromium:build": "yarn test ./chromium/ && NODE_ENV=production node ./scripts/build-chromium.js",
-    "chromium:develop": "nodemon --watch ./src/chromium --exec \"yarn run chromium:build\"",
+    "chromium:build": "npm-run-all -s chromium:test chromium:build:no-test",
+    "chromium:test": "yarn test ./chromium/",
+    "chromium:build:no-test": "NODE_ENV=production node ./scripts/build-chromium.js",
+    "chromium:develop": "nodemon --watch ./src --exec \"yarn run chromium:build:no-test && yarn run chromium:test\"",
     "firefox:build": "yarn run firefox:test && yarn run firefox:build:no-test",
     "firefox:test": "yarn test ./firefox/",
     "firefox:build:no-test": "NODE_ENV=production node ./scripts/build-firefox.js",
