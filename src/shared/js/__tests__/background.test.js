@@ -61,8 +61,14 @@ describe('background in extension new tab page', () => {
     ])
   })
 
-  // TODO
   test('showBackgroundColor works as expected', () => {
+    // Set up our document body
+    document.body.innerHTML = "<div id='user-background'></div>"
+    const bkgElem = document.getElementById('user-background')
+    expect(bkgElem.style.background).toBe('')
+    const showBackgroundColor = require('../background').showBackgroundColor
+    showBackgroundColor('#FF0000')
+    expect(bkgElem.style.background).toBe('rgb(255, 0, 0)')
   })
 
   // TODO

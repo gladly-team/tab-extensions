@@ -25,9 +25,10 @@ export const updateBackgroundSettings = (settings) => {
   localStorageMgr.setItem(STORAGE_BACKGROUND_IMAGE_URL, settings.imageURL)
 }
 
-// TODO
 export const showBackgroundColor = (color) => {
   console.log('Showing background color', color)
+  const bkgElem = document.getElementById('user-background')
+  bkgElem.style.background = color
 }
 
 // TODO
