@@ -8,9 +8,10 @@
     "build": "yarn run chromium:build && yarn run firefox:build",
     "chromium:build": "yarn test ./chromium/ && NODE_ENV=production node ./scripts/build-chromium.js",
     "chromium:develop": "nodemon --watch ./src/chromium --exec \"yarn run chromium:build\"",
-    "firefox:build": "yarn test ./firefox/ && NODE_ENV=production node ./scripts/build-firefox.js",
-    "firefox:lint": "web-ext lint --source-dir=./src/firefox",
-    "firefox:run": "web-ext run --source-dir=./ src/firefox",
+    "firefox:build": "yarn run firefox:test && yarn run firefox:build-only",
+    "firefox:test": "yarn test ./firefox/",
+    "firefox:build:no-test": "NODE_ENV=production node ./scripts/build-firefox.js",
+    "firefox:develop": "nodemon --watch ./src --exec \"yarn run firefox:build:no-test\" & web-ext run --source-dir=./intermediate-builds/firefox/self-hosted",
     "shared:build": "NODE_ENV=production node ./scripts/build-shared.js",
     "lint": "standard"
   },
