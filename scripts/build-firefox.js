@@ -6,6 +6,7 @@ const execSync = require('child_process').execSync
 var SRC_DIR = path.join(__dirname, '../src/firefox/')
 var BUILD_DIR = path.join(__dirname, '../build/firefox/')
 var INTERMEDIATE_BUILD_DIR = path.join(__dirname, '../intermediate-builds/firefox/')
+var INTERMEDIATE_BUILD_DIR_TMP_MANIFESTS = path.join(INTERMEDIATE_BUILD_DIR, 'tmp')
 var ADDON_STORE_INTERMEDIATE_BUILD_DIR = path.join(INTERMEDIATE_BUILD_DIR, 'addon-store')
 var SELF_HOSTED_INTERMEDIATE_BUILD_DIR = path.join(INTERMEDIATE_BUILD_DIR, 'self-hosted')
 var SHARED_CODE_BUILD_DIR = path.join(__dirname, '../intermediate-builds/shared/')
@@ -17,17 +18,17 @@ console.log('Building extension version ' + version + '...')
 
 // Empty build target contents. This will also create the directory
 // if it does not exist.
-fs.emptyDirSync(INTERMEDIATE_BUILD_DIR)
 fs.emptyDirSync(BUILD_DIR)
+fs.emptyDirSync(INTERMEDIATE_BUILD_DIR)
+fs.emptyDirSync(INTERMEDIATE_BUILD_DIR_TMP_MANIFESTS)
 
 // Create two Firefox builds with different configurations,
 // one for the Mozilla addons store and the other to self-host
 // to enable downloads from a web page.
 
 // Make the final manifests.
-execSync(`mkdir -p ${SRC_DIR}tmp`)
-execSync(`cat ${SRC_DIR}manifest.json ${SRC_DIR}manifest.addon-store-overrides.json | json --deep-merge > ${SRC_DIR}tmp/manifest.addon-store.json`)
-execSync(`cat ${SRC_DIR}manifest.json ${SRC_DIR}manifest.self-hosted-overrides.json | json --deep-merge > ${SRC_DIR}tmp/manifest.self-hosted.json`)
+execSync(`cat ${SRC_DIR}manifest.json ${SRC_DIR}manifest.addon-store-overrides.json | json --deep-merge > ${INTERMEDIATE_BUILD_DIR_TMP_MANIFESTS}manifest.addon-store.json`)
+execSync(`cat ${SRC_DIR}manifest.json ${SRC_DIR}manifest.self-hosted-overrides.json | json --deep-merge > ${INTERMEDIATE_BUILD_DIR_TMP_MANIFESTS}manifest.self-hosted.json`)
 
 // Filter copying source files to build. Return true if we should copy and
 // false if we should not.
@@ -51,7 +52,7 @@ var filterCopiedFiles = (src, dest) => {
   return true
 }
 
-console.log('Building intermediate extension for the addon store at ' + ADDON_STORE_INTERMEDIATE_BUILD_DIR)
+console.log('Building intermediate extension for the addon store...')
 fs.copySync(SRC_DIR, ADDON_STORE_INTERMEDIATE_BUILD_DIR, { filter: filterCopiedFiles })
 fs.copySync(
   path.join(SRC_DIR, 'tmp/manifest.addon-store.json'),
@@ -59,7 +60,7 @@ fs.copySync(
   { overwrite: true }
 )
 
-console.log('Building intermediate self-hosted extension at ' + SELF_HOSTED_INTERMEDIATE_BUILD_DIR)
+console.log('Building intermediate self-hosted extension...')
 fs.copySync(SRC_DIR, SELF_HOSTED_INTERMEDIATE_BUILD_DIR, { filter: filterCopiedFiles })
 fs.copySync(
   path.join(SRC_DIR, 'tmp/manifest.self-hosted.json'),
@@ -68,7 +69,7 @@ fs.copySync(
 )
 
 // Delete the tmp directory used for building manifests.
-fs.removeSync(`${SRC_DIR}tmp`)
+fs.removeSync(INTERMEDIATE_BUILD_DIR_TMP_MANIFESTS)
 
 // Build the shared code and add it to the built extension.
 execSync('yarn run shared:build')

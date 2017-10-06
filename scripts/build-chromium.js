@@ -2,8 +2,11 @@
 var fs = require('fs-extra')
 var path = require('path')
 const execSync = require('child_process').execSync
-
 var archiver = require('archiver')
+
+// In the future, could consider crx-hotreload script for better
+// development experience:
+// https://github.com/xpl/crx-hotreload/blob/master/hot-reload.js
 
 var BASE_BUILD_DIR = path.join(__dirname, '../build/')
 var BUILD_DIR = path.join(BASE_BUILD_DIR, 'chromium/')
