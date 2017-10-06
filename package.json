@@ -11,7 +11,9 @@
     "firefox:build": "yarn run firefox:test && yarn run firefox:build-only",
     "firefox:test": "yarn test ./firefox/",
     "firefox:build:no-test": "NODE_ENV=production node ./scripts/build-firefox.js",
-    "firefox:develop": "nodemon --watch ./src --exec \"yarn run firefox:build:no-test\" & web-ext run --source-dir=./intermediate-builds/firefox/self-hosted",
+    "firefox:develop": "npm-run-all -p firefox:develop:watch firefox:develop:webext",
+    "firefox:develop:webext": "web-ext run --source-dir=./intermediate-builds/firefox/self-hosted",
+    "firefox:develop:watch": "nodemon --watch ./src --exec \"yarn run firefox:build:no-test && yarn run firefox:test\"",
     "shared:build": "NODE_ENV=production node ./scripts/build-shared.js",
     "lint": "standard"
   },
@@ -35,6 +37,7 @@
     "jest": "^19.0.2",
     "json": "^9.0.6",
     "nodemon": "^1.11.0",
+    "npm-run-all": "^4.1.1",
     "standard": "^10.0.3",
     "web-ext": "^2.0.0",
     "webpack": "^3.6.0"
