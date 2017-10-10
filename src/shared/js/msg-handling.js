@@ -27,7 +27,6 @@ function receiveMessage (event) {
   }
   switch (event.data.type) {
     case POST_MESSAGE_TYPE_BACKGROUND_SETTINGS:
-      console.log('Updating background settings:', event)
       updateBackgroundSettings(event.data.data)
       break
     default:
