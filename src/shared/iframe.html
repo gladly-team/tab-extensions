@@ -40,11 +40,24 @@
         height: 100vh;
         z-index: -100;
       }
+      #background-tint {
+        opacity: 0;
+        transition: opacity 0.8s ease-in;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -99;
+      }
     </style>
   </head>
   <body>
     <iframe class='tab-iframe' src='http://tab.gladly.io/newtab/'></iframe>
     <div id='user-background'></div>
+    <div id='background-tint'></div>
     <script type='text/javascript' src='./js/newtab.js'></script>
   </body>
 </html>

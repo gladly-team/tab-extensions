@@ -6,6 +6,12 @@ beforeEach(() => {
   jest.clearAllMocks()
 })
 
+function getDocHTML () {
+  return '' +
+    "<div id='user-background'></div>" +
+    "<div id='background-tint'></div>"
+}
+
 describe('background in extension new tab page', () => {
   test('getBackgroundSettings calls localStorage as expected', () => {
     jest.mock('../localstorage-mgr', () => {
@@ -63,18 +69,25 @@ describe('background in extension new tab page', () => {
 
   test('showBackgroundColor works as expected', () => {
     // Set up our document body
-    document.body.innerHTML = "<div id='user-background'></div>"
+    document.body.innerHTML = getDocHTML()
     const bkgElem = document.getElementById('user-background')
     expect(bkgElem.style.background).toBe('')
     const showBackgroundColor = require('../background').showBackgroundColor
     showBackgroundColor('#FF0000')
+
+    // Background
     expect(bkgElem.style.background).toBe('rgb(255, 0, 0)')
     expect(bkgElem.style.opacity).toEqual('1')
+
+    // Background tint
+    const bkgTintElem = document.getElementById('background-tint')
+    expect(bkgTintElem.style.backgroundColor).toEqual('rgba(0, 0, 0, 0.03)')
+    expect(bkgTintElem.style.opacity).toEqual('1')
   })
 
   test('showBackgroundImg works as expected', () => {
     // Set up our document body
-    document.body.innerHTML = "<div id='user-background'></div>"
+    document.body.innerHTML = getDocHTML()
 
     const showBackgroundImg = require('../background').showBackgroundImg
     const fakeImgSrc = 'http://example.com/my-img.png'
@@ -84,5 +97,10 @@ describe('background in extension new tab page', () => {
     const bkgElem = document.getElementById('user-background')
     expect(bkgElem.style.backgroundImage).toEqual('url(http://example.com/my-img.png)')
     expect(bkgElem.style.opacity).toEqual('1')
+
+    //  Background tint
+    const bkgTintElem = document.getElementById('background-tint')
+    expect(bkgTintElem.style.backgroundColor).toEqual('rgba(0, 0, 0, 0.2)')
+    expect(bkgTintElem.style.opacity).toEqual('1')
   })
 })

@@ -29,8 +29,12 @@ export const updateBackgroundSettings = (settings) => {
 export const showBackgroundColor = (color) => {
   console.log(`Showing background color: ${color}`)
   const bkgElem = document.getElementById('user-background')
+  const bkgTintElem = document.getElementById('background-tint')
   bkgElem.style.background = color
   bkgElem.style.opacity = '1'
+  bkgTintElem.style.backgroundColor = 'rgba(0, 0, 0, 0.03)'
+  bkgTintElem.style.visibility = 'visible'
+  bkgTintElem.style.opacity = '1'
 }
 
 export const showBackgroundImg = (imgSrc) => {
@@ -38,10 +42,12 @@ export const showBackgroundImg = (imgSrc) => {
   const img = new Image()
   img.addEventListener('load', function () {
     const bkgElem = document.getElementById('user-background')
-    // TODO: need to add inset shadow to sibling element.
-    // bkgElem.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(' + imgSrc + ')'
+    const bkgTintElem = document.getElementById('background-tint')
     bkgElem.style.backgroundImage = `url(${imgSrc})`
     bkgElem.style.opacity = '1'
+    bkgTintElem.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'
+    bkgTintElem.style.visibility = 'visible'
+    bkgTintElem.style.opacity = '1'
   })
   img.src = imgSrc
 }
