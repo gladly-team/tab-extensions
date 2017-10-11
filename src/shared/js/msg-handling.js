@@ -9,13 +9,20 @@ import {
 // Handle messages from webpage.
 
 var trustedOrigins = [
-  'http://localhost:3000', // dev
   'http://tab.gladly.io',
   'https://tab.gladly.io',
   'http://www.tabforacause.org',
   'https://www.tabforacause.org',
   'http://gladly.io',
-  'https://gladly.io'
+  'https://gladly.io',
+  // Used in development
+  'http://localhost:3000',
+  'http://test-tab2017.gladly.io',
+  'https://test-tab2017.gladly.io',
+  'http://dev-tab2017.gladly.io',
+  'https://dev-tab2017.gladly.io',
+  'http://prod-tab2017.gladly.io',
+  'https://prod-tab2017.gladly.io'
 ]
 
 // Called sometime after postMessage is called
