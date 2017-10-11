@@ -35,5 +35,9 @@ function receiveMessage (event) {
 
 // Listen for messages from the web app.
 export const addListener = () => {
-  window.addEventListener('message', receiveMessage, false)
+  try {
+    window.addEventListener('message', receiveMessage, false)
+  } catch (e) {
+    console.error(e)
+  }
 }
