@@ -19,7 +19,6 @@ export const getBackgroundSettings = () => {
 
 // Update background settings.
 export const updateBackgroundSettings = (settings) => {
-  console.log('Updating background settings:', settings)
   localStorageMgr.setItem(STORAGE_BACKGROUND_OPTION, settings.backgroundOption)
   localStorageMgr.setItem(STORAGE_BACKGROUND_CUSTOM_IMAGE, settings.customImage)
   localStorageMgr.setItem(STORAGE_BACKGROUND_COLOR, settings.backgroundColor)
@@ -27,7 +26,6 @@ export const updateBackgroundSettings = (settings) => {
 }
 
 export const showBackgroundColor = (color) => {
-  console.log(`Showing background color: ${color}`)
   const bkgElem = document.getElementById('user-background')
   const bkgTintElem = document.getElementById('background-tint')
   bkgElem.style.background = color
@@ -38,7 +36,6 @@ export const showBackgroundColor = (color) => {
 }
 
 export const showBackgroundImg = (imgSrc) => {
-  console.log(`Showing background image: ${imgSrc}`)
   const img = new Image()
   img.addEventListener('load', function () {
     const bkgElem = document.getElementById('user-background')
