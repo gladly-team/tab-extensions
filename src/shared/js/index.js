@@ -1,4 +1,6 @@
 
-import './example'
+import renderBackground from './render-background'
+import { addListener } from './msg-handling'
 
-// console.log('This is index.js')
+renderBackground()
+addListener()
