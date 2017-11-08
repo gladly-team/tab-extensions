@@ -42,7 +42,7 @@ export const showBackgroundImg = (imgSrc) => {
     const bkgTintElem = document.getElementById('background-tint')
     bkgElem.style.backgroundImage = `url(${imgSrc})`
     bkgElem.style.opacity = '1'
-    bkgTintElem.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'
+    bkgTintElem.style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
     bkgTintElem.style.visibility = 'visible'
     bkgTintElem.style.opacity = '1'
   })
