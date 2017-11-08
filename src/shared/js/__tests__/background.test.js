@@ -100,7 +100,7 @@ describe('background in extension new tab page', () => {
 
     //  Background tint
     const bkgTintElem = document.getElementById('background-tint')
-    expect(bkgTintElem.style.backgroundColor).toEqual('rgba(0, 0, 0, 0.2)')
+    expect(bkgTintElem.style.backgroundColor).toEqual('rgba(0, 0, 0, 0.15)')
     expect(bkgTintElem.style.opacity).toEqual('1')
   })
 })
