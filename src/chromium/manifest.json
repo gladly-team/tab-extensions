@@ -3,7 +3,7 @@
     "newtab": "iframe.html"
   },
   "manifest_version": 2,
-  "description": "Donate to a cause you care about just by surfing the web!",
+  "description": "Raise money for charity with every browser tab you open!",
   "icons": {
     "16": "./img/logo16.png",
     "32": "./img/logo32.png",

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "homepage_url": "https://tab.gladly.io",
-  "description": "Donate to a cause you care about just by surfing the web!",
+  "description": "Raise money for charity with every browser tab you open!",
   "chrome_url_overrides": {
     "newtab": "iframe.html"
   },
