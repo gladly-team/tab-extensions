@@ -19,7 +19,8 @@ global.chrome = {
       UPDATE: 'update',
       CHROME_UPDATE: 'chrome_update',
       SHARED_MODULE_UPDATE: 'shared_module_update'
-    }
+    },
+    setUninstallURL: jest.fn()
   },
   tabs: {
     create: jest.fn()
@@ -37,7 +38,8 @@ global.browser = {
       UPDATE: 'update',
       BROWSER_UPDATE: 'browser_update',
       SHARED_MODULE_UPDATE: 'shared_module_update'
-    }
+    },
+    setUninstallURL: jest.fn()
   },
   tabs: {
     create: jest.fn()
