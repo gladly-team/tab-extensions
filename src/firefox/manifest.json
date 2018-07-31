@@ -13,8 +13,7 @@
   },
   "name": "Tab for a Cause",
   "background": {
-    "scripts": ["ext-background.js"],
-    "persistent": false
+    "scripts": ["ext-background.js"]
   },
   "permissions": [
     "tabs"
