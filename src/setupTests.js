@@ -25,3 +25,21 @@ global.chrome = {
     create: jest.fn()
   }
 }
+
+// Mock Firefox extension APIs
+global.browser = {
+  runtime: {
+    onInstalled: {
+      addListener: jest.fn()
+    },
+    OnInstalledReason: {
+      INSTALL: 'install',
+      UPDATE: 'update',
+      BROWSER_UPDATE: 'browser_update',
+      SHARED_MODULE_UPDATE: 'shared_module_update'
+    }
+  },
+  tabs: {
+    create: jest.fn()
+  }
+}
