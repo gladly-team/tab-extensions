@@ -49,3 +49,21 @@ test('gracefully handles any error with opening the welcome page', () => {
     previousVersion: '5.18'
   })
 })
+
+test('sets the post-uninstall URL', () => {
+  require('../ext-background')
+  expect(browser.runtime.setUninstallURL)
+    .toHaveBeenCalledWith('https://tab.gladly.io/newtab/uninstalled/')
+})
+
+test('gracefully handles errors with setting the post-uninstall URL', () => {
+  browser.runtime.setUninstallURL.mockImplementationOnce(() => {
+    throw new Error('Whoops!')
+  })
+
+  // Suppress expected console error.
+  jest.spyOn(console, 'error').mockImplementationOnce(() => {})
+
+  // Should not throw.
+  require('../ext-background')
+})

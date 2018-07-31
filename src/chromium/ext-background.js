@@ -12,3 +12,12 @@ chrome.runtime.onInstalled.addListener(function (object) {
     console.error(e)
   }
 })
+
+// On uninstall, open a post-uninstall page to get feedback.
+// https://developer.chrome.com/extensions/runtime#method-setUninstallURL
+try {
+  const postUninstallURL = 'https://tab.gladly.io/newtab/uninstalled/'
+  chrome.runtime.setUninstallURL(postUninstallURL)
+} catch (e) {
+  console.error(e)
+}
