@@ -32,6 +32,7 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "testPathIgnorePatterns": [
       "<rootDir>[/\\\\](build|docs|node_modules)[/\\\\]"
     ],
