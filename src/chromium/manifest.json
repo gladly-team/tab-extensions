@@ -11,9 +11,13 @@
     "128": "./img/logo128.png"
   },
   "name": "Tab for a Cause",
+  "background": {
+    "scripts": ["ext-background.js"],
+    "persistent": false
+  },
   "permissions": [
     "tabs"
   ],
   "update_url": "http://clients2.google.com/service/update2/crx",
-  "version": "5.18"
+  "version": "5.19"
 }

@@ -12,8 +12,11 @@
     "128": "./img/logo128.png"
   },
   "name": "Tab for a Cause",
+  "background": {
+    "scripts": ["ext-background.js"]
+  },
   "permissions": [
     "tabs"
   ],
-  "version": "5.10"
+  "version": "5.11"
 }

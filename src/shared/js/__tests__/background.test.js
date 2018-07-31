@@ -89,6 +89,15 @@ describe('background in extension new tab page', () => {
     // Set up our document body
     document.body.innerHTML = getDocHTML()
 
+    // Mock that the image loads immediately.
+    global.Image = () => ({
+      addEventListener: (name, onLoadCallback) => {
+        if (name === 'load') {
+          onLoadCallback()
+        }
+      }
+    })
+
     const showBackgroundImg = require('../background').showBackgroundImg
     const fakeImgSrc = 'http://example.com/my-img.png'
     showBackgroundImg(fakeImgSrc)
