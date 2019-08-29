@@ -15,9 +15,7 @@
     "scripts": ["ext-background.js"],
     "persistent": false
   },
-  "permissions": [
-    "tabs"
-  ],
+  "permissions": [],
   "update_url": "http://clients2.google.com/service/update2/crx",
   "version": "5.19"
 }

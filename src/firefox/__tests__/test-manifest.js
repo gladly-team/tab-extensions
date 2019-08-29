@@ -8,7 +8,7 @@ const manifestSelfHosted = require('../manifest.self-hosted-overrides.json')
 
 test('manifest permissions have not changed', () => {
   var permissions = manifest['permissions']
-  expect(permissions).toEqual(['tabs'])
+  expect(permissions).toEqual([])
 })
 
 test('content script permissions have not changed', () => {
