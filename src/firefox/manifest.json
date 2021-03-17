@@ -3,7 +3,7 @@
   "homepage_url": "https://tab.gladly.io",
   "description": "Raise money for charity with every browser tab you open!",
   "chrome_url_overrides": {
-    "newtab": "iframe.html"
+    "newtab": "redirect.html"
   },
   "icons": {
     "16": "./img/logo16.png",
