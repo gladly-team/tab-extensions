@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Tab for a Cause",
   "description": "Raise money for charity with every browser tab you open!",
   "icons": {
@@ -11,11 +11,10 @@
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
-  "background": { 
-    "scripts" : ["ext-background.js"],
-    "persistent": false
+  "background": {
+    "service_worker": "ext-background.js"
   },
   "permissions": [],
   "update_url": "http://clients2.google.com/service/update2/crx",
-  "version": "5.21"
+  "version": "6.0"
 }
