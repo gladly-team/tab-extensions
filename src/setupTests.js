@@ -23,7 +23,10 @@ global.chrome = {
     setUninstallURL: jest.fn()
   },
   tabs: {
-    create: jest.fn()
+    create: jest.fn(),
+    onCreated: {
+      addListener: jest.fn()
+    }
   }
 }
 
