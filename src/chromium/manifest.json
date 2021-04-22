@@ -1,7 +1,4 @@
 {
-  "chrome_url_overrides": {
-    "newtab": "iframe.html"
-  },
   "manifest_version": 3,
   "description": "Raise money for charity with every browser tab you open!",
   "icons": {
