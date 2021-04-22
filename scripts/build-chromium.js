@@ -38,7 +38,22 @@ fs.removeSync(path.join(stageDir, '__tests__'))
 
 // Build the shared code and add it to the built extension.
 execSync('yarn run shared:build')
-fs.copySync(SHARED_CODE_BUILD_DIR, stageDir)
+
+const filterSharedFiles = (src, dest) => {
+  if (path.basename(src) === '.DS_Store') {
+    return false
+  }
+  const ignoredPaths = [
+    // Include this if Chrome should not use the shared iframe HTML
+    // as the new tab page. We will remove the unused file from the
+    // builds.
+    'iframe.html'
+  ]
+  return !ignoredPaths.some((ignoredPath) => {
+    return src.indexOf(ignoredPath) > -1
+  })
+}
+fs.copySync(SHARED_CODE_BUILD_DIR, stageDir, { filter: filterSharedFiles })
 
 // Create zip file.
 var zipFileName = 'chrome-tfac-v' + version + '.zip'

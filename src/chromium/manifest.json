@@ -1,5 +1,6 @@
 {
   "manifest_version": 2,
+  "name": "Tab for a Cause",
   "description": "Raise money for charity with every browser tab you open!",
   "icons": {
     "16": "./img/logo16.png",
@@ -7,7 +8,9 @@
     "48": "./img/logo48.png",
     "128": "./img/logo128.png"
   },
-  "name": "Tab for a Cause",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
   "background": { 
     "scripts" : ["ext-background.js"],
     "persistent": false
