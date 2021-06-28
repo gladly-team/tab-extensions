@@ -39,3 +39,4 @@ jspm_packages
 build
 tmp
 intermediate-builds
+.DS_Store
