@@ -51,5 +51,10 @@ global.browser = {
   },
   tabs: {
     create: jest.fn()
+  },
+  browserAction: {
+    onClicked: {
+      addListener: jest.fn()
+    }
   }
 }
