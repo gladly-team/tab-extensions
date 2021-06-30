@@ -56,18 +56,6 @@ test('sets the post-uninstall URL', () => {
     .toHaveBeenCalledWith('https://tab.gladly.io/newtab/uninstalled/')
 })
 
-test('gracefully handles errors with registering the action click handler', () => {
-  chrome.runtime.setUninstallURL.mockImplementationOnce(() => {
-    throw new Error('Whoops!')
-  })
-
-  // Suppress expected console error.
-  jest.spyOn(console, 'error').mockImplementationOnce(() => {})
-
-  // Should not throw.
-  require('../ext-background')
-})
-
 test('gracefully handles any error with handling an action icon click', () => {
   require('../ext-background')
 
