@@ -19,7 +19,7 @@ chrome.action.onClicked.addListener(function (tab) {
     const newTabURL = 'chrome://newtab'
     chrome.tabs.create({ url: newTabURL })
   } catch (e) {
-    console.log(e)
+    console.error(e)
   }
 }
 )
