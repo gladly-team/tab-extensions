@@ -13,6 +13,17 @@ chrome.runtime.onInstalled.addListener(function (object) {
   }
 })
 
+chrome.action.onClicked.addListener(function (tab) {
+  console.log('hi')
+  try {
+    const newTabURL = 'chrome://newtab'
+    chrome.tabs.create({ url: newTabURL })
+  } catch (e) {
+    console.log(e)
+  }
+}
+)
+
 // On uninstall, open a post-uninstall page to get feedback.
 // https://developer.chrome.com/extensions/runtime#method-setUninstallURL
 try {
