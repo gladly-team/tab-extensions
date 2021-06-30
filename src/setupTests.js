@@ -27,6 +27,11 @@ global.chrome = {
     onCreated: {
       addListener: jest.fn()
     }
+  },
+  action: {
+    onClicked: {
+      addListener: jest.fn()
+    }
   }
 }
 
