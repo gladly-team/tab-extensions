@@ -21,8 +21,7 @@ chrome.action.onClicked.addListener(function (tab) {
   } catch (e) {
     console.error(e)
   }
-}
-)
+})
 
 // On uninstall, open a post-uninstall page to get feedback.
 // https://developer.chrome.com/extensions/runtime#method-setUninstallURL
