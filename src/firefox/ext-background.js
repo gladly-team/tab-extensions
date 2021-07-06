@@ -13,6 +13,16 @@ browser.runtime.onInstalled.addListener(function (object) {
   }
 })
 
+// https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
+browser.browserAction.onClicked.addListener(function (tab) {
+  try {
+    const newTabURL = 'about://newtab'
+    browser.tabs.create({ url: newTabURL })
+  } catch (e) {
+    console.error(e)
+  }
+})
+
 // On uninstall, open a post-uninstall page to get feedback.
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
 try {
