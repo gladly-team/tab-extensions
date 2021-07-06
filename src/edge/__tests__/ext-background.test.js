@@ -67,3 +67,24 @@ test('gracefully handles errors with setting the post-uninstall URL', () => {
   // Should not throw.
   require('../ext-background')
 })
+
+test('gracefully handles any error with handling an action icon click', () => {
+  require('../ext-background')
+
+  chrome.tabs.create.mockImplementationOnce(() => {
+    throw new Error('Whoops!')
+  })
+
+  // Suppress expected console error.
+  jest.spyOn(console, 'error').mockImplementationOnce(() => { })
+
+  // Mock the action icon click event
+  const tab = chrome.action.onClicked.addListener.mock.calls[0][0]
+  tab({
+    id: 1
+  })
+
+  expect(chrome.tabs.create).toHaveBeenCalledWith({
+    url: 'chrome://newtab'
+  })
+})
