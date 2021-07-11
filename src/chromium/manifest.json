@@ -14,7 +14,7 @@
   "background": {
     "service_worker": "ext-background.js"
   },
-  "permissions": [],
+  "permissions": ["tabs"],
   "update_url": "http://clients2.google.com/service/update2/crx",
   "version": "6.0"
 }

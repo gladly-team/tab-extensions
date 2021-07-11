@@ -21,3 +21,16 @@ try {
 } catch (e) {
   console.error(e)
 }
+
+const redirectURLS = [
+  'opera://startpage/',
+  'browser://startpage/',
+  'chrome://startpage/',
+  'chrome://startpageshared/'
+]
+
+chrome.tabs.onUpdated.addListener(async function (tabId, changeInfo, tab) {
+  if (redirectURLS.includes(tab.url)) {
+    await chrome.tabs.update(tab.id, { url: 'http://tab.gladly.io/newtab/' })
+  }
+})
