@@ -16,8 +16,7 @@ browser.runtime.onInstalled.addListener(function (object) {
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 browser.browserAction.onClicked.addListener(function (tab) {
   try {
-    const newTabURL = 'about://newtab'
-    browser.tabs.create({ url: newTabURL })
+    browser.tabs.create({})
   } catch (e) {
     console.error(e)
   }
