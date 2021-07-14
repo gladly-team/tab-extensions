@@ -71,8 +71,4 @@ test('gracefully handles any error with handling an action icon click', () => {
   tab({
     id: 1
   })
-
-  expect(chrome.tabs.create).toHaveBeenCalledWith({
-    url: 'chrome://newtab'
-  })
 })
