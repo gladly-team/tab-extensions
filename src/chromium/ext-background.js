@@ -16,8 +16,7 @@ chrome.runtime.onInstalled.addListener(function (object) {
 // https://developer.chrome.com/docs/extensions/reference/action/#event-onClicked
 chrome.action.onClicked.addListener(function (tab) {
   try {
-    const newTabURL = 'chrome://newtab'
-    chrome.tabs.create({ url: newTabURL })
+    chrome.tabs.create()
   } catch (e) {
     console.error(e)
   }
