@@ -19,6 +19,9 @@
     "firefox:develop": "npm-run-all -p firefox:develop:watch firefox:develop:webext",
     "firefox:develop:webext": "sleep 8 && web-ext run --source-dir=./intermediate-builds/firefox/self-hosted",
     "firefox:develop:watch": "nodemon --watch ./src -e js,json,html --exec \"yarn run firefox:build:no-test && yarn run firefox:test\"",
+    "opera:build": "npm-run-all -s opera:test opera:build:no-test",
+    "opera:test": "yarn test ./",
+    "opera:build:no-test": "NODE_ENV=production node ./scripts/build-opera.js",
     "shared:build": "NODE_ENV=production node ./scripts/build-shared.js",
     "lint": "standard"
   },
