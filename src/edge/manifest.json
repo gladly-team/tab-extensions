@@ -15,6 +15,7 @@
   "background": {
     "scripts": ["ext-background.js"]
   },
+  "action": {},
   "permissions": [],
   "version": "1.0"
 }
