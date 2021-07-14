@@ -11,6 +11,13 @@
     "48": "./img/logo48.png",
     "128": "./img/logo128.png"
   },
+  "browser_action": {
+    "browser_style": false,
+    "default_icon": {
+      "16": "./img/logo16.png",
+      "32": "./img/logo32.png"
+    }
+  },
   "name": "Tab for a Cause",
   "background": {
     "scripts": ["ext-background.js"]
