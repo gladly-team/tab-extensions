@@ -13,7 +13,7 @@
   },
   "name": "Tab for a Cause",
   "background": {
-    "scripts": ["ext-background.js"]
+    "service_worker": "ext-background.js"
   },
   "action": {},
   "permissions": [],
