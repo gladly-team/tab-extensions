@@ -11,26 +11,7 @@
 		7039F9A2264B574200E6A87E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7039F9A0264B574200E6A87E /* Main.storyboard */; };
 		7039F9A4264B574200E6A87E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7039F9A3264B574200E6A87E /* ViewController.swift */; };
 		7039F9A6264B574400E6A87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7039F9A5264B574400E6A87E /* Assets.xcassets */; };
-		7039F9AD264B574400E6A87E /* Tab for a Cause Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7039F9AC264B574400E6A87E /* Tab for a Cause Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7039F9B2264B574400E6A87E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7039F9B1264B574400E6A87E /* Cocoa.framework */; };
-		7039F9B5264B574400E6A87E /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7039F9B4264B574400E6A87E /* SafariWebExtensionHandler.swift */; };
-		7039F9B8264B574400E6A87E /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 7039F9B7264B574400E6A87E /* _locales */; };
-		7039F9BA264B574400E6A87E /* images in Resources */ = {isa = PBXBuildFile; fileRef = 7039F9B9264B574400E6A87E /* images */; };
-		7039F9BC264B574400E6A87E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7039F9BB264B574400E6A87E /* manifest.json */; };
-		7039F9BE264B574400E6A87E /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 7039F9BD264B574400E6A87E /* background.js */; };
-		7068AB73264B5D5500CCA686 /* newtab.html in Resources */ = {isa = PBXBuildFile; fileRef = 7068AB71264B5D5400CCA686 /* newtab.html */; };
-		7068AB74264B5D5500CCA686 /* newtab.js in Resources */ = {isa = PBXBuildFile; fileRef = 7068AB72264B5D5500CCA686 /* newtab.js */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7039F9AE264B574400E6A87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7039F992264B574200E6A87E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7039F9AB264B574400E6A87E;
-			remoteInfo = "safari Extension";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7039F9CE264B574400E6A87E /* Embed App Extensions */ = {
@@ -39,7 +20,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				7039F9AD264B574400E6A87E /* Tab for a Cause Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,7 +34,6 @@
 		7039F9A3264B574200E6A87E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7039F9A5264B574400E6A87E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7039F9A7264B574400E6A87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7039F9AC264B574400E6A87E /* Tab for a Cause Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tab for a Cause Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7039F9B1264B574400E6A87E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7039F9B4264B574400E6A87E /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		7039F9B7264B574400E6A87E /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
@@ -75,14 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7039F9A9264B574400E6A87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7039F9B2264B574400E6A87E /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				7039F99A264B574200E6A87E /* Tab for a Cause.app */,
-				7039F9AC264B574400E6A87E /* Tab for a Cause Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,29 +135,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				7039F9AF264B574400E6A87E /* PBXTargetDependency */,
 			);
 			name = "Tab for a Cause";
 			productName = safari;
 			productReference = 7039F99A264B574200E6A87E /* Tab for a Cause.app */;
 			productType = "com.apple.product-type.application";
-		};
-		7039F9AB264B574400E6A87E /* Tab for a Cause Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7039F9CB264B574400E6A87E /* Build configuration list for PBXNativeTarget "Tab for a Cause Extension" */;
-			buildPhases = (
-				7039F9A8264B574400E6A87E /* Sources */,
-				7039F9A9264B574400E6A87E /* Frameworks */,
-				7039F9AA264B574400E6A87E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Tab for a Cause Extension";
-			productName = "safari Extension";
-			productReference = 7039F9AC264B574400E6A87E /* Tab for a Cause Extension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -199,9 +151,6 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					7039F999264B574200E6A87E = {
-						CreatedOnToolsVersion = 12.3;
-					};
-					7039F9AB264B574400E6A87E = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -220,7 +169,6 @@
 			projectRoot = "";
 			targets = (
 				7039F999264B574200E6A87E /* Tab for a Cause */,
-				7039F9AB264B574400E6A87E /* Tab for a Cause Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -232,19 +180,6 @@
 			files = (
 				7039F9A6264B574400E6A87E /* Assets.xcassets in Resources */,
 				7039F9A2264B574200E6A87E /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7039F9AA264B574400E6A87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7039F9BE264B574400E6A87E /* background.js in Resources */,
-				7068AB73264B5D5500CCA686 /* newtab.html in Resources */,
-				7039F9BA264B574400E6A87E /* images in Resources */,
-				7039F9BC264B574400E6A87E /* manifest.json in Resources */,
-				7039F9B8264B574400E6A87E /* _locales in Resources */,
-				7068AB74264B5D5500CCA686 /* newtab.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,23 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7039F9A8264B574400E6A87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7039F9B5264B574400E6A87E /* SafariWebExtensionHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7039F9AF264B574400E6A87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7039F9AB264B574400E6A87E /* Tab for a Cause Extension */;
-			targetProxy = 7039F9AE264B574400E6A87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7039F9A0264B574200E6A87E /* Main.storyboard */ = {
@@ -405,48 +324,6 @@
 			};
 			name = Release;
 		};
-		7039F9CC264B574400E6A87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "safari Extension/safari_Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3535B2SD8H;
-				INFOPLIST_FILE = "safari Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "gladly-team.safari.Extension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		7039F9CD264B574400E6A87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "safari Extension/safari_Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3535B2SD8H;
-				INFOPLIST_FILE = "safari Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "gladly-team.safari.Extension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		7039F9D0264B574400E6A87E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -501,15 +378,6 @@
 			buildConfigurations = (
 				7039F9C9264B574400E6A87E /* Debug */,
 				7039F9CA264B574400E6A87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7039F9CB264B574400E6A87E /* Build configuration list for PBXNativeTarget "Tab for a Cause Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7039F9CC264B574400E6A87E /* Debug */,
-				7039F9CD264B574400E6A87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
