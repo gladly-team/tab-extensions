@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/kevinjennison/dev/tab-extensions/src/safari/Tab for a Cause.xcodeproj">
    </FileRef>
 </Workspace>
