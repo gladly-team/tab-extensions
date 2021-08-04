@@ -10,7 +10,7 @@ import SafariServices.SFSafariApplication
 import SafariServices.SFSafariExtensionManager
 
 let appName = "Tab for a Cause"
-let extensionBundleIdentifier = "io.gladly.Tab-for-a-Cause.Extension"
+let extensionBundleIdentifier = "io.gladly.TabForACause.Extension"
 
 class ViewController: NSViewController {
 
