@@ -1,8 +1,9 @@
 
-browser.runtime.onInstalled.addListener(function (object) {
+browser.runtime.onInstalled.addListener(({ reason }) => {
+  const INSTALL = 'install'
   try {
     // On install, open a welcome tab.
-    if (object.reason === chrome.runtime.OnInstalledReason.INSTALL) {
+    if (reason === INSTALL) {
       const postInstallURL = 'https://tab.gladly.io/newtab/first-tab/'
       browser.tabs.create({ url: postInstallURL })
     }
