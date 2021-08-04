@@ -18,10 +18,8 @@
 		E2A2826926BAD9C600239A27 /* images in Resources */ = {isa = PBXBuildFile; fileRef = E2A2826826BAD9C600239A27 /* images */; };
 		E2A2826B26BAD9C600239A27 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = E2A2826A26BAD9C600239A27 /* manifest.json */; };
 		E2A2826D26BAD9C600239A27 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = E2A2826C26BAD9C600239A27 /* background.js */; };
-		E2A2826F26BAD9C600239A27 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = E2A2826E26BAD9C600239A27 /* content.js */; };
-		E2A2827126BAD9C600239A27 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = E2A2827026BAD9C600239A27 /* popup.html */; };
-		E2A2827326BAD9C600239A27 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = E2A2827226BAD9C600239A27 /* popup.css */; };
-		E2A2827526BAD9C600239A27 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = E2A2827426BAD9C600239A27 /* popup.js */; };
+		E2A2828226BADDB600239A27 /* newtab.html in Resources */ = {isa = PBXBuildFile; fileRef = E2A2828126BADDB600239A27 /* newtab.html */; };
+		E2A2828426BADE6B00239A27 /* newtab.js in Resources */ = {isa = PBXBuildFile; fileRef = E2A2828326BADE6B00239A27 /* newtab.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +61,10 @@
 		E2A2826826BAD9C600239A27 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		E2A2826A26BAD9C600239A27 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		E2A2826C26BAD9C600239A27 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
-		E2A2826E26BAD9C600239A27 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
-		E2A2827026BAD9C600239A27 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
-		E2A2827226BAD9C600239A27 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
-		E2A2827426BAD9C600239A27 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		E2A2827626BAD9C600239A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A2827726BAD9C600239A27 /* Tab_for_a_Cause_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tab_for_a_Cause_Extension.entitlements; sourceTree = "<group>"; };
+		E2A2828126BADDB600239A27 /* newtab.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = newtab.html; sourceTree = "<group>"; };
+		E2A2828326BADE6B00239A27 /* newtab.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = newtab.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,10 +144,8 @@
 				E2A2826826BAD9C600239A27 /* images */,
 				E2A2826A26BAD9C600239A27 /* manifest.json */,
 				E2A2826C26BAD9C600239A27 /* background.js */,
-				E2A2826E26BAD9C600239A27 /* content.js */,
-				E2A2827026BAD9C600239A27 /* popup.html */,
-				E2A2827226BAD9C600239A27 /* popup.css */,
-				E2A2827426BAD9C600239A27 /* popup.js */,
+				E2A2828126BADDB600239A27 /* newtab.html */,
+				E2A2828326BADE6B00239A27 /* newtab.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -246,13 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A2826D26BAD9C600239A27 /* background.js in Resources */,
-				E2A2827326BAD9C600239A27 /* popup.css in Resources */,
-				E2A2827126BAD9C600239A27 /* popup.html in Resources */,
+				E2A2828226BADDB600239A27 /* newtab.html in Resources */,
 				E2A2826926BAD9C600239A27 /* images in Resources */,
+				E2A2828426BADE6B00239A27 /* newtab.js in Resources */,
 				E2A2826B26BAD9C600239A27 /* manifest.json in Resources */,
 				E2A2826726BAD9C600239A27 /* _locales in Resources */,
-				E2A2826F26BAD9C600239A27 /* content.js in Resources */,
-				E2A2827526BAD9C600239A27 /* popup.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

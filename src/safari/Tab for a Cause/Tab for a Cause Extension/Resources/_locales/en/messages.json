@@ -1,10 +1,10 @@
 {
-    "extension_name": {
-        "message": "Tab for a Cause Extension",
-        "description": "The display name for the extension."
-    },
-    "extension_description": {
-        "message": "This is Tab for a Cause Extension. You should tell us what your extension does here.",
-        "description": "Description of what the extension does."
-    }
+  "extension_name": {
+    "message": "Tab for a Cause",
+    "description": "The display name for the extension."
+  },
+  "extension_description": {
+    "message": "Raise money for charity with every tab you open in Safari! Just by surfing the web, you can build libraries, plant trees, send emergency aid, give clean water, and more. Choose your favorite charity to support!",
+    "description": "Description of what the extension does."
+  }
 }
