@@ -20,6 +20,7 @@
 		E2A2826D26BAD9C600239A27 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = E2A2826C26BAD9C600239A27 /* background.js */; };
 		E2A2828226BADDB600239A27 /* newtab.html in Resources */ = {isa = PBXBuildFile; fileRef = E2A2828126BADDB600239A27 /* newtab.html */; };
 		E2A2828426BADE6B00239A27 /* newtab.js in Resources */ = {isa = PBXBuildFile; fileRef = E2A2828326BADE6B00239A27 /* newtab.js */; };
+		E2A2828B26BAF1FB00239A27 /* logo48.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A2828A26BAF1FB00239A27 /* logo48.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E2A2827726BAD9C600239A27 /* Tab_for_a_Cause_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tab_for_a_Cause_Extension.entitlements; sourceTree = "<group>"; };
 		E2A2828126BADDB600239A27 /* newtab.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = newtab.html; sourceTree = "<group>"; };
 		E2A2828326BADE6B00239A27 /* newtab.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = newtab.js; sourceTree = "<group>"; };
+		E2A2828A26BAF1FB00239A27 /* logo48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo48.png; path = "Tab for a Cause Extension/Resources/images/logo48.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				E2A2824C26BAD9C300239A27 /* Tab_for_a_Cause.entitlements */,
 				E2A2824D26BAD9C300239A27 /* AppDelegate.swift */,
 				E2A2824F26BAD9C300239A27 /* Main.storyboard */,
+				E2A2828A26BAF1FB00239A27 /* logo48.png */,
 				E2A2825226BAD9C300239A27 /* ViewController.swift */,
 				E2A2825426BAD9C500239A27 /* Assets.xcassets */,
 				E2A2825626BAD9C500239A27 /* Info.plist */,
@@ -230,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A2828B26BAF1FB00239A27 /* logo48.png in Resources */,
 				E2A2825526BAD9C500239A27 /* Assets.xcassets in Resources */,
 				E2A2825126BAD9C300239A27 /* Main.storyboard in Resources */,
 			);
