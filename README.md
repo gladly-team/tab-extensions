@@ -1,6 +1,23 @@
 # Tab for a Cause Browser Extensions
 The easiest way to do good every day! Join in: [tab.gladly.io](https://tab.gladly.io/)
 
+## Browser Support
+
+#### 🟢 [Chrome](https://chrome.google.com/webstore/detail/tab-for-a-cause/gibkoahgjfhphbmeiphbcnhehbfdlcgo)
+
+#### 🟢 [Edge](https://microsoftedge.microsoft.com/addons/detail/tab-for-a-cause/hmiiajmhelfgiaoboffbjpjdckbmnddg)
+
+#### 🟡 Safari
+* Development in progress. Check back soon!
+
+#### 🔴 Firefox
+* The Firefox team has chosen to restrict new tab page functionality. See issue [#31](https://github.com/gladly-team/tab-extensions/issues/31).
+* Users can build the extension from source and load it locally.
+
+#### 🔴 Opera
+* Opera [does not allow](https://dev.opera.com/extensions/acceptance-criteria/) extensions to change the new tab page.
+* Users can build the extension from source and load it locally.
+
 ## Developers
 
 ### Getting Started
