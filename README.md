@@ -40,24 +40,18 @@ The easiest way to do good every day! Join in: [tab.gladly.io](https://tab.gladl
 * At `edge://extensions/`, check the "Developer mode" box and load the unpacked extension from `build/edge/`.
 * Manually run the build script after making changes.
 
-##### Firefox
-* `yarn run firefox:develop`
-* This opens an instance of Firefox with the extension installed. It will hot reload on changes.
-
-##### Safari
+#### Safari
 * Use Xcode to develop and build.
 * On build, it will add the extension to Safari and prompt you to enable it.
 
-##### Opera
+#### Firefox
+* `yarn run firefox:develop`
+* This opens an instance of Firefox with the extension installed. It will hot reload on changes.
+
+#### Opera
 * `yarn run opera:build`
 * At `opera://extensions/`, check the "Developer mode" box and load the unpacked extension from `build/opera/`.
 * Manually run the build script after making changes.
-
-### Building
-
-**All but Safari:** `yarn run build`
-
-**Safari:** build within Xcode.
 
 ### Distributing
 
