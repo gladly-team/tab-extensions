@@ -55,6 +55,8 @@ global.browser = {
   tabs: {
     create: jest.fn()
   },
+  // Manifest V2-only property
+  // Manifest V3 replaces this with `action`
   browserAction: {
     onClicked: {
       addListener: jest.fn()
