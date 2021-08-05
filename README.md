@@ -1,41 +1,60 @@
 # Tab for a Cause Browser Extensions
+The easiest way to do good every day! Join in: [tab.gladly.io](https://tab.gladly.io/)
 
-## Getting Started
+## Developers
+
+### Getting Started
 
 * Install [Yarn](https://yarnpkg.com/en/)
 * Clone this repository
 * At the root of the repository, run `yarn`
 
-## Developing
+### Developing
 
-### Chrome
+#### Chrome
 * `yarn run chromium:develop`
-* At chrome://extensions/, check the "Developer mode" box and load the unpacked extension from the repository's `build/chromium/` directory.
-* The extension will re-build on file change but still requires manually reloading the extension in Chrome.
+* At `chrome://extensions/`, check the "Developer mode" box and load the unpacked extension from `build/chromium/`.
+* The extension will re-build on file change. You still should manually reload the extension in Chrome.
 
-### Firefox
+#### Edge
+* `yarn run edge:build`
+* At `edge://extensions/`, check the "Developer mode" box and load the unpacked extension from `build/edge/`.
+* Manually run the build script after making changes.
+
+##### Firefox
 * `yarn run firefox:develop`
 * This opens an instance of Firefox with the extension installed. It will hot reload on changes.
 
-## Building
+##### Safari
+* Use Xcode to develop and build.
+* On build, it will add the extension to Safari and prompt you to enable it.
 
-### All Browsers
-`yarn run build`
+##### Opera
+* `yarn run opera:build`
+* At `opera://extensions/`, check the "Developer mode" box and load the unpacked extension from `build/opera/`.
+* Manually run the build script after making changes.
 
-### Chrome
-`yarn run chromium:build`
+### Building
 
-### Firefox
-`yarn run firefox:build`
+**All but Safari:** `yarn run build`
 
-Note: we maintain two Firefox extensions: one that is listed in the Mozilla Add-ons Store and one that is self-hosted for download from our web page. This builds both. The extensions only differ in some manifest.json entries; see `manifest.addon-store-overrides.json` and `manifest.self-hosted-overrides.json`. We build the final manifest.json files in the Firefox build script.
+**Safari:** build within Xcode.
 
-## Testing
-`yarn test`
+### Distributing
 
-## Releasing to Firefox Add-ons Store
+#### Chrome and Edge
 
-We need to provide source code for review (see [docs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Source_Code_Submission)). To do so:
+Upload the built archives in the browsers' developer dashboards.
+
+#### Safari
+
+In XCode, create an archive and distribute it to the App Store.
+
+#### Firefox
+
+Upload the built archive in the developer dashboard.
+
+When submitting to the Firefox Add-ons Store, we need to provide source code for review (see [docs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Source_Code_Submission)). To do so:
 
 1. Download this repository as a .zip file
 2. In the Add-ons Developer Hub, upload the .zip file as "Source code" when releasing a new version
