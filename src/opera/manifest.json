@@ -8,9 +8,6 @@
     "48": "./img/logo48.png",
     "128": "./img/logo128.png"
   },
-  "chrome_url_overrides": {
-    "newtab": "newtab.html"
-  },
   "background": {
     "service_worker": "ext-background.js"
   },
