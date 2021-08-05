@@ -24,6 +24,10 @@ try {
 
 // When the user calls a new tab key shortcut defined in manifest.json,
 // open Tab for a Cause.
+// This is a workaround because Opera:
+//  * does not support the chrome_url_overrides property
+//  * does not allow replacing the start page. See:
+//    https://dev.opera.com/extensions/acceptance-criteria/
 const NEW_TAB_URL = 'http://tab.gladly.io/newtab/'
 chrome.commands.onCommand.addListener((commandName) => {
   if (commandName === 'open-tab') {
