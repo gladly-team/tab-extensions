@@ -22,6 +22,13 @@ try {
   console.error(e)
 }
 
+// Opera does not support the chrome_url_overrides property
+// in manifest.json, so this is a workaround.
+// However, we cannot distribute the extension, because as
+// of 2021.8.05, Opera acceptance criteria don't allow custom
+// new tab pages:
+// "Extensions cannot replace Opera’s default start page."
+// https://dev.opera.com/extensions/acceptance-criteria/
 const redirectURLS = [
   'opera://startpage/',
   'browser://startpage/',
