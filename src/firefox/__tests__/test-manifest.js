@@ -47,10 +47,10 @@ test('self-hosted manifest overrides are as expected', () => {
 })
 
 // Tests action property exists
-// Action key must exist in manifest to use chrome.action API
-// https://developer.chrome.com/docs/extensions/reference/action/#manifest
+// browser_action property must exist for
+// Firefox to show extension icon in toolbar
 
-test('browserAction property exists', () => {
+test('browser_action property exists', () => {
   expect(manifest['browser_action']).toBeTruthy()
 })
 
