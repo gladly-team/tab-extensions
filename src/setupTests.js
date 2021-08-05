@@ -26,6 +26,9 @@ global.chrome = {
     create: jest.fn(),
     onCreated: {
       addListener: jest.fn()
+    },
+    onUpdated: {
+      addListener: jest.fn()
     }
   }
 }
