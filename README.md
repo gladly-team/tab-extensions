@@ -1,41 +1,73 @@
 # Tab for a Cause Browser Extensions
+The easiest way to do good every day! Join in: [tab.gladly.io](https://tab.gladly.io/)
 
-## Getting Started
+## Browser Support
+
+#### 🟢 &nbsp; [Chrome](https://chrome.google.com/webstore/detail/tab-for-a-cause/gibkoahgjfhphbmeiphbcnhehbfdlcgo)
+
+#### 🟢 &nbsp; [Edge](https://microsoftedge.microsoft.com/addons/detail/tab-for-a-cause/hmiiajmhelfgiaoboffbjpjdckbmnddg)
+
+#### 🟡 &nbsp; Safari
+* Development in progress. Check back soon!
+
+#### ❌ &nbsp; Firefox
+* The Firefox team has chosen to restrict new tab page functionality. See issue [#31](https://github.com/gladly-team/tab-extensions/issues/31).
+* You can build the extension from source (from this repo) and load it locally.
+
+#### ❌ &nbsp; Opera
+* Opera [does not allow](https://dev.opera.com/extensions/acceptance-criteria/) extensions to change the new tab page.
+* You can build the extension from source (from this repo) and load it locally.
+
+**We aim to support every major browser.** We continue to advocate for change in the browsers that restrict new tab page functionality, because we believe everybody should be able to raise money for charity as they browse the web.
+
+## Developers
+
+### Getting Started
 
 * Install [Yarn](https://yarnpkg.com/en/)
 * Clone this repository
 * At the root of the repository, run `yarn`
 
-## Developing
+### Developing
 
-### Chrome
+#### Chrome
 * `yarn run chromium:develop`
-* At chrome://extensions/, check the "Developer mode" box and load the unpacked extension from the repository's `build/chromium/` directory.
-* The extension will re-build on file change but still requires manually reloading the extension in Chrome.
+* At `chrome://extensions/`, check the "Developer mode" box and load the unpacked extension from `build/chromium/`.
+* The extension will re-build on file change. You still should manually reload the extension in Chrome.
 
-### Firefox
+#### Edge
+* `yarn run edge:build`
+* At `edge://extensions/`, check the "Developer mode" box and load the unpacked extension from `build/edge/`.
+* Manually run the build script after making changes.
+
+#### Safari
+* Use Xcode to develop and build.
+* On build, it will add the extension to Safari and prompt you to enable it.
+
+#### Firefox
 * `yarn run firefox:develop`
 * This opens an instance of Firefox with the extension installed. It will hot reload on changes.
 
-## Building
+#### Opera
+* `yarn run opera:build`
+* At `opera://extensions/`, check the "Developer mode" box and load the unpacked extension from `build/opera/`.
+* Manually run the build script after making changes.
 
-### All Browsers
-`yarn run build`
+### Distributing
 
-### Chrome
-`yarn run chromium:build`
+#### Chrome and Edge
 
-### Firefox
-`yarn run firefox:build`
+Upload the built archives in the browsers' developer dashboards.
 
-Note: we maintain two Firefox extensions: one that is listed in the Mozilla Add-ons Store and one that is self-hosted for download from our web page. This builds both. The extensions only differ in some manifest.json entries; see `manifest.addon-store-overrides.json` and `manifest.self-hosted-overrides.json`. We build the final manifest.json files in the Firefox build script.
+#### Safari
 
-## Testing
-`yarn test`
+In XCode, create an archive and distribute it to the App Store.
 
-## Releasing to Firefox Add-ons Store
+#### Firefox
 
-We need to provide source code for review (see [docs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Source_Code_Submission)). To do so:
+Upload the built archive in the developer dashboard.
+
+When submitting to the Firefox Add-ons Store, we need to provide source code for review (see [docs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Source_Code_Submission)). To do so:
 
 1. Download this repository as a .zip file
 2. In the Add-ons Developer Hub, upload the .zip file as "Source code" when releasing a new version
