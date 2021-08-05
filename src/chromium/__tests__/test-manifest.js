@@ -29,6 +29,14 @@ test('extension update URL is set to Chrome Web Store', () => {
   expect(manifest['update_url']).toBe(updateEndpoint)
 })
 
+// Tests action property exists
+// Action key must exist in manifest to use chrome.action API
+// https://developer.chrome.com/docs/extensions/reference/action/#manifest
+
+test('action property exists', () => {
+  expect(manifest['action']).toBeTruthy()
+})
+
 // Basic display tests.
 
 test('extension name is correct', () => {

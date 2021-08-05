@@ -46,6 +46,14 @@ test('self-hosted manifest overrides are as expected', () => {
   })
 })
 
+// Tests action property exists
+// Action key must exist in manifest to use chrome.action API
+// https://developer.chrome.com/docs/extensions/reference/action/#manifest
+
+test('browserAction property exists', () => {
+  expect(manifest['browser_action']).toBeTruthy()
+})
+
 // Basic display tests.
 
 test('extension name is correct', () => {
