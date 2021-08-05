@@ -12,11 +12,13 @@ The easiest way to do good every day! Join in: [tab.gladly.io](https://tab.gladl
 
 #### ❌ &nbsp; Firefox
 * The Firefox team has chosen to restrict new tab page functionality. See issue [#31](https://github.com/gladly-team/tab-extensions/issues/31).
-* Users can build the extension from source and load it locally.
+* You can build the extension from source (from this repo) and load it locally.
 
 #### ❌ &nbsp; Opera
 * Opera [does not allow](https://dev.opera.com/extensions/acceptance-criteria/) extensions to change the new tab page.
-* Users can build the extension from source and load it locally.
+* Users can build the extension from source (from this repo) and load it locally.
+
+**We aim to support every major browser.** We continue to advocate for change in the browsers that restrict new tab page functionality, because we believe everybody should be able to raise money for charity as they browse the web.
 
 ## Developers
 
