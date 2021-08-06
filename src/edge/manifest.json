@@ -15,6 +15,7 @@
   "background": {
     "service_worker": "ext-background.js"
   },
+  "action": {},
   "permissions": [],
   "version": "1.0"
 }

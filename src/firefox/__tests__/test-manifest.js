@@ -46,6 +46,14 @@ test('self-hosted manifest overrides are as expected', () => {
   })
 })
 
+// Tests action property exists
+// browser_action property must exist for
+// Firefox to show extension icon in toolbar
+
+test('browser_action property exists', () => {
+  expect(manifest['browser_action']).toBeTruthy()
+})
+
 // Basic display tests.
 
 test('extension name is correct', () => {
