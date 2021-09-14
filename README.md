@@ -7,8 +7,7 @@ The easiest way to do good every day! Join in: [tab.gladly.io](https://tab.gladl
 
 #### 🟢 &nbsp; [Edge](https://microsoftedge.microsoft.com/addons/detail/tab-for-a-cause/hmiiajmhelfgiaoboffbjpjdckbmnddg)
 
-#### 🟡 &nbsp; Safari
-* Development in progress. Check back soon!
+#### 🟢 &nbsp; [Safari](https://apps.apple.com/us/app/tab-for-a-cause/id1579749108)
 
 #### ❌ &nbsp; Firefox
 * The Firefox team has chosen to restrict new tab page functionality. See issue [#31](https://github.com/gladly-team/tab-extensions/issues/31).
