@@ -11,6 +11,14 @@
   "background": {
     "service_worker": "ext-background.js"
   },
+  "commands": {
+    "open-tab": {
+      "suggested_key": {
+        "default": "Ctrl+K"
+      },
+      "description": "Open Tab for a Cause."
+    }
+  },
   "permissions": ["tabs"],
   "update_url": "http://clients2.google.com/service/update2/crx",
   "version": "1.0"
