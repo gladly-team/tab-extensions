@@ -22,7 +22,6 @@
     "opera:build": "npm-run-all -s opera:test opera:build:no-test",
     "opera:test": "yarn test ./",
     "opera:build:no-test": "NODE_ENV=production node ./scripts/build-opera.js",
-    "shared:build": "NODE_ENV=production node ./scripts/build-shared.js",
     "lint": "standard"
   },
   "repository": {
