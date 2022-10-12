@@ -1,3 +1,4 @@
+/* globals browser */
 
 browser.runtime.onInstalled.addListener(({ reason }) => {
   const INSTALL = 'install'
