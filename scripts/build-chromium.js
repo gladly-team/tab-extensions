@@ -34,9 +34,6 @@ var filterCopiedFiles = (src, dest) => {
 fs.copySync(SRC_DIR, stageDir, { filter: filterCopiedFiles })
 fs.removeSync(path.join(stageDir, '__tests__'))
 
-// Note that we do not include any shared files in the
-// Chromium build. Its src stands on its own.
-
 // Create zip file.
 var zipFileName = 'chrome-tfac-v' + version + '.zip'
 var output = fs.createWriteStream(path.join(BUILD_DIR, zipFileName))

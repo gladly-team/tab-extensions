@@ -8,7 +8,6 @@ var BUILD_DIR = path.join(__dirname, '../build/firefox/')
 var INTERMEDIATE_BUILD_DIR = path.join(__dirname, '../intermediate-builds/firefox/')
 var ADDON_STORE_INTERMEDIATE_BUILD_DIR = path.join(INTERMEDIATE_BUILD_DIR, 'addon-store')
 var SELF_HOSTED_INTERMEDIATE_BUILD_DIR = path.join(INTERMEDIATE_BUILD_DIR, 'self-hosted')
-var SHARED_CODE_BUILD_DIR = path.join(__dirname, '../intermediate-builds/shared/')
 
 // Get the version number.
 var manifest = require(path.join(SRC_DIR, 'manifest.json'))
@@ -57,30 +56,6 @@ fs.copySync(SRC_DIR, SELF_HOSTED_INTERMEDIATE_BUILD_DIR, { filter: filterCopiedF
 
 // Make the final manifest.
 execSync(`cat ${SRC_DIR}manifest.json ${SRC_DIR}manifest.self-hosted-overrides.json | json --deep-merge > ${path.join(SELF_HOSTED_INTERMEDIATE_BUILD_DIR, 'manifest.json')}`)
-
-const filterSharedFiles = (src, dest) => {
-  var ignoredPaths = [
-    // Include this if Firefox should not use the shared iframe HTML
-    // as the new tab page. We will remove the unused file from the
-    // builds.
-    'iframe.html'
-  ]
-  if (path.basename(src) === '.DS_Store') {
-    return false
-  }
-  var containsIgnoredPath = ignoredPaths.some(function (ignoredPath) {
-    return src.indexOf(ignoredPath) > -1
-  })
-  if (containsIgnoredPath) {
-    return false
-  }
-  return true
-}
-
-// Build the shared code and add it to the built extension.
-execSync('yarn run shared:build')
-fs.copySync(SHARED_CODE_BUILD_DIR, ADDON_STORE_INTERMEDIATE_BUILD_DIR, { filter: filterSharedFiles })
-fs.copySync(SHARED_CODE_BUILD_DIR, SELF_HOSTED_INTERMEDIATE_BUILD_DIR, { filter: filterSharedFiles })
 
 console.log('Making final extension builds.')
 execSync(`web-ext build --source-dir=${ADDON_STORE_INTERMEDIATE_BUILD_DIR} -a ${BUILD_DIR}addon-store --overwrite-dest`)
