@@ -3,7 +3,7 @@
   "default_locale": "en",
   "name": "Tab for a Cause",
   "description": "Raise money for charity with every browser tab you open!",
-  "version": "1.0",
+  "version": "1.1",
   "icons": {
     "16": "images/logo16.png",
     "32": "images/logo32.png",
